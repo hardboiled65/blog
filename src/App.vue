@@ -17,6 +17,7 @@ export default {
     let path = localStorage.getItem('path');
     if (path) {
       localStorage.removeItem('path');
+      path = path.replace('blog/', '', 1);
       this.$router.replace(path);
     }
   },
