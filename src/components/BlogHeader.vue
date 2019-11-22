@@ -8,8 +8,8 @@
       </div>
       <ul class="nav-list">
         <li><a href="/">Home</a></li>
-        <li><a href="/archives">Archives</a></li>
-        <li><a href="/tags">Tags</a></li>
+        <li><router-link to="/archives">Archives</router-link></li>
+        <li><router-link to="/tags">Tags</router-link></li>
       </ul>
     </div>
   </div>
