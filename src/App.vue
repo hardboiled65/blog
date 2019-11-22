@@ -11,7 +11,15 @@ export default {
   name: 'app',
   components: {
     Blog,
-  }
+  },
+
+  created() {
+    let path = localStorage.getItem('path');
+    if (path) {
+      localStorage.removeItem('path');
+      this.$router.replace(path);
+    }
+  },
 }
 </script>
 
