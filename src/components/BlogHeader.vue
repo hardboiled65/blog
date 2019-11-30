@@ -1,7 +1,7 @@
 <template>
   <div class="blog-header">
     <div class="title-area">
-      <h1 class="title">Command-line Interface</h1>
+      <h1 class="title">{{ title }}</h1>
     </div>
     <div class="nav-area">
       <div class="diagonal">
@@ -18,6 +18,13 @@
 <script>
 export default {
   name: 'blog-header',
+
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
 
   data: () => ({
   }),

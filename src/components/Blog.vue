@@ -1,8 +1,12 @@
 <template>
   <div class="blog">
-    <blog-header />
+    <blog-header
+      :title="title" />
     <div class="wrapper">
-      <router-view></router-view>
+      <router-view
+        v-on:changeTitle="onChangeTitle"
+        v-on:resetTitle="onResetTitle">
+      </router-view>
     </div>
   </div>
 </template>
@@ -18,8 +22,28 @@ export default {
   },
 
   data: () => ({
+    defaultTitle: 'Command-line Interface',
     title: 'Command-line Interface',
   }),
+
+  computed: {
+    currentTitle() {
+      if (/posts\/[0-9]+/.test(this.$route.path)) {
+        return 'Post title';
+      }
+      return this.title;
+    },
+  },
+
+  methods: {
+    onChangeTitle(title) {
+      this.title = title;
+    },
+
+    onResetTitle() {
+      this.title = this.defaultTitle;
+    },
+  },
 }
 </script>
 

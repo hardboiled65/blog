@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import HelloWorld from '@/components/HelloWorld'
 import BlogIndex from '@/components/BlogIndex'
+import BlogPost from '@/components/BlogPost'
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,10 @@ const router = new VueRouter({
     {
       path: '/hello',
       component: HelloWorld,
+    },
+    {
+      path: '/posts/:id',
+      component: BlogPost,
     },
   ]
 });
