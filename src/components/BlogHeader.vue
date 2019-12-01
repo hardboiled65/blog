@@ -67,11 +67,13 @@ export default {
 
 .nav-area {
   position: relative;
+  width: 100%;
   color: white;
 }
 
 .nav-area .diagonal {
   position: absolute;
+  max-width: 100%;
   height: 0;
 }
 
@@ -80,6 +82,7 @@ export default {
   display: inline-block;
   width: 100vw;
   height: 160px;
+  max-width: 100%;
   background-image: url('../assets/header-diagonal.svg');
   background-repeat: no-repeat;
   background-position: right 0;
