@@ -1,6 +1,6 @@
 <template>
   <div class="blog-post">
-    <div>{{ content }}</div>
+    <div class="content" v-html="content"></div>
   </div>
 </template>
 
@@ -34,4 +34,12 @@ export default {
 </script>
 
 <style>
+.content h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-family: serif;
+}
 </style>
