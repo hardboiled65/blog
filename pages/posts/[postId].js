@@ -35,7 +35,8 @@ const Post = () => {
   return (
     <App title={post.title}>
       <Head>
-        <link rel="stylesheet" href="/post.css" />
+        <link rel="stylesheet"
+          href={process.env.NODE_ENV === 'production' ? '/blog/post.css' : '/post.css'} />
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet" />
       </Head>
 
