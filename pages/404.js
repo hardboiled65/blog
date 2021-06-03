@@ -9,7 +9,7 @@ const Custom404 = () => {
   })
 
   useEffect(() => {
-    if (path.startsWith('posts/')) {
+    if (path.startsWith('/blog/posts/')) {
       localStorage.setItem('path', path);
       const router = useRouter();
       router.push(path);
