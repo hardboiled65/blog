@@ -10,6 +10,11 @@ const New = () => {
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState('');
 
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (match) return match[2];
+  }
+
   const onInputTitle = (e) => {
     setTitle(e.target.value);
   }
@@ -38,11 +43,15 @@ const New = () => {
       content: content,
       tags: tags,
     };
+    const token = getCookie('token');
     let config = {
       headers: {
         'Content-Type': 'application/json',
       },
     };
+    if (token) {
+      config.headers['Authorization'] = token;
+    }
     axios.post('https://blog.hardboiled65.tk/api/v1/posts', payload, config)
       .then(response => {
         if (response.status === 200) {
