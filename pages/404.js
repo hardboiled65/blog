@@ -8,15 +8,14 @@ const Custom404 = () => {
 
   useEffect(() => {
     setPath(window.location.pathname.slice(1));
-    console.log(path);
   });
 
+  const router = useRouter();
 
   useEffect(() => {
     setDebugMessage('useEffect');
     if (path.startsWith('blog/posts/')) {
       localStorage.setItem('path', path);
-      const router = useRouter();
       router.push(path);
     } else {
       setDebugMessage('Not starts with blog/posts/');
