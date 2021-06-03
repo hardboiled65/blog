@@ -16,7 +16,10 @@ const Custom404 = () => {
     }
   }, [path]);
 
-  return <div>404</div>
+  return <div>
+    <h1>404 - Page not found</h1>
+    <p>path: { path }</p>
+  </div>
 }
 
 export default Custom404
