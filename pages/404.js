@@ -16,7 +16,8 @@ const Custom404 = () => {
     setDebugMessage('useEffect');
     if (path.startsWith('blog/posts/')) {
       localStorage.setItem('path', path);
-      router.push('/' + path);
+      const realRealPath = path.slice('5');
+      router.push('/' + realRealPath);
     } else {
       setDebugMessage('Not starts with blog/posts/');
     }
