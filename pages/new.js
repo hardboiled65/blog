@@ -52,7 +52,7 @@ const New = () => {
     if (token) {
       config.headers['Authorization'] = token;
     }
-    axios.post('https://blog.hardboiled65.tk/api/v1/posts', payload, config)
+    axios.post('https://blog.hardboiled65.io/api/v1/posts', payload, config)
       .then(response => {
         if (response.status === 200) {
           console.log('success');

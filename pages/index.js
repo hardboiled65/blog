@@ -25,7 +25,7 @@ function Index() {
   const [dates, setDates] = useState([]);
 
   useEffect(async () => {
-    const res = await axios.get('https://blog.hardboiled65.tk/api/v1/archives');
+    const res = await axios.get('https://blog.hardboiled65.io/api/v1/archives');
 
     setArchives(res.data);
     // setDates(archivesDates());

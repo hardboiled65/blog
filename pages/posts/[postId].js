@@ -27,7 +27,7 @@ const Post = () => {
       return;
     }
 
-    const res = await axios.get('https://blog.hardboiled65.tk/api/v1/posts/' + postId);
+    const res = await axios.get('https://blog.hardboiled65.io/api/v1/posts/' + postId);
 
     setPost(res.data);
   }, [postId]);
